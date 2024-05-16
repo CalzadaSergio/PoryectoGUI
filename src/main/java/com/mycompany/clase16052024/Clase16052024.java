@@ -1,4 +1,3 @@
-
 package com.mycompany.clase16052024;
 import javax.swing.*;
 import java.awt.*;
@@ -9,6 +8,8 @@ public class Clase16052024 extends JFrame {
         setTitle("Ventana Principal");
         setSize(300, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+       
         
         JButton boton = new JButton("423032132");
         boton.addActionListener(new ActionListener() {
@@ -26,7 +27,9 @@ public class Clase16052024 extends JFrame {
     
     private void mostrarVentanaDatos() {
         JFrame ventanaDatos = new JFrame("423032132");
-        ventanaDatos.setSize(300, 200);
+        ventanaDatos.setSize(500, 500);
+        ImageIcon image = new ImageIcon("gar.png");
+       
         
         JLabel labelNombre = new JLabel("Nombre: Sergio Armando Calzada LOzada");
         JLabel labelEdad = new JLabel("Edad: 20 años");
@@ -34,7 +37,8 @@ public class Clase16052024 extends JFrame {
         JLabel labelNacimiento = new JLabel("Fecha de nacimiento: 8 de septiembre de 2003");
         JLabel labelDireccion = new JLabel("Direccion:Cerrda Guerrero s/n");
         
-        
+         ImageIcon icono = new ImageIcon("gar.png");
+        JLabel labelImagen = new JLabel(icono);
         
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(2, 1));
@@ -43,6 +47,8 @@ public class Clase16052024 extends JFrame {
         panel.add(labelCuenta);
         panel.add(labelNacimiento);
         panel.add(labelDireccion);
+        panel.add(labelImagen);
+       
         
         ventanaDatos.add(panel);
         ventanaDatos.setVisible(true);
@@ -56,3 +62,4 @@ public class Clase16052024 extends JFrame {
         });
     }
 }
+
